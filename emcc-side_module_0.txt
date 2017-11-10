@@ -1,0 +1,79 @@
+INFO:rustc_trans::back::link: preparing CrateTypeExecutable to "target/main.js"
+INFO:rustc_trans::back::link: "./linker.sh" "-s" "DISABLE_EXCEPTION_CATCHING=1" "-L" "/Users/pepyakin/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/wasm32-unknown-emscripten/lib" "target/main.main0.rust-cgu.o" "-o" "target/main.js" "-s" "EXPORTED_FUNCTIONS=[\"_call\",\"_takes_slice\"]" "-O3" "--memory-init-file" "0" "-g4" "-s" "DEFAULT_LIBRARY_FUNCS_TO_INCLUDE=[]" "-L" "/Users/pepyakin/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/wasm32-unknown-emscripten/lib" "/Users/pepyakin/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/wasm32-unknown-emscripten/lib/libcore-03a45bcd40eeb81d.rlib" "-s" "BINARYEN=1" "-s" "ERROR_ON_UNDEFINED_SYMBOLS=1"
+INFO:rustc_trans::back::link: linker stderr:
+DEBUG:root:PYTHON not defined in /Users/pepyakin/.emscripten, using "/usr/local/opt/python/bin/python2.7"
+DEBUG:root:JAVA not defined in /Users/pepyakin/.emscripten, using "java"
+DEBUG:root:Cache: PID 39070 acquiring multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache
+DEBUG:root:Cache: done
+DEBUG:root:Cache: PID 39070 released multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache
+DEBUG:root:check tells us to use asm.js backend
+WARNING:root:invocation: /Users/pepyakin/tmp/emsdk_portable/emscripten/incoming/emcc -s DISABLE_EXCEPTION_CATCHING=1 -L /Users/pepyakin/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/wasm32-unknown-emscripten/lib target/main.main0.rust-cgu.o -o target/main.js -s EXPORTED_FUNCTIONS=["_call","_takes_slice"] -O3 --memory-init-file 0 -g4 -s DEFAULT_LIBRARY_FUNCS_TO_INCLUDE=[] -L /Users/pepyakin/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/wasm32-unknown-emscripten/lib /Users/pepyakin/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/wasm32-unknown-emscripten/lib/libcore-03a45bcd40eeb81d.rlib -s BINARYEN=1 -s ERROR_ON_UNDEFINED_SYMBOLS=0 -s NO_EXIT_RUNTIME=1 -s NO_FILESYSTEM=1 -s USE_PTHREADS=0 -s LEGALIZE_JS_FFI=0 -s SIDE_MODULE=0  (in /Users/pepyakin/tmp/size-research/emcc-bare-side_module)
+DEBUG:root:Checking JS engine ['/Users/pepyakin/tmp/emsdk_portable/node/4.1.1_64bit/bin/node']
+INFO:root:(Emscripten: Running sanity checks)
+DEBUG:root:asm.js opts not forced by user or an option that depends them, and we do not intend to run the asm.js, so disabling and leaving opts to the binaryen optimizer
+DEBUG:root:compiling to bitcode
+DEBUG:root:emcc step "parse arguments and setup" took 0.21 seconds
+DEBUG:root:using bitcode file: target/main.main0.rust-cgu.o
+DEBUG:root:using library file: /Users/pepyakin/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/wasm32-unknown-emscripten/lib/libcore-03a45bcd40eeb81d.rlib
+DEBUG:root:emcc step "bitcodeize inputs" took 0.00 seconds
+DEBUG:root:emcc step "process inputs" took 0.00 seconds
+DEBUG:root:will generate JavaScript
+DEBUG:root:setting binaryen root to /Users/pepyakin/.emscripten_ports/binaryen/binaryen-version_39
+DEBUG:root:including port: binaryen
+DEBUG:root:    (at /Users/pepyakin/.emscripten_ports/binaryen)
+DEBUG:root:Cache: PID 39070 acquiring multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache/asmjs
+DEBUG:root:Cache: done
+DEBUG:root:Cache: PID 39070 released multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache/asmjs
+DEBUG:root:including dlmalloc_debug.bc
+DEBUG:root:Cache: PID 39070 acquiring multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache/asmjs
+DEBUG:root:Cache: done
+DEBUG:root:Cache: PID 39070 released multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache/asmjs
+DEBUG:root:including libc.bc
+DEBUG:root:Cache: PID 39070 acquiring multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache/asmjs
+DEBUG:root:Cache: done
+DEBUG:root:Cache: PID 39070 released multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache/asmjs
+DEBUG:root:including wasm-libc.bc
+DEBUG:root:Cache: PID 39070 acquiring multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache/asmjs
+DEBUG:root:Cache: done
+DEBUG:root:Cache: PID 39070 released multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache/asmjs
+DEBUG:root:emcc step "calculate system libraries" took 0.07 seconds
+DEBUG:root:linking: ['target/main.main0.rust-cgu.o', '/Users/pepyakin/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/wasm32-unknown-emscripten/lib/libcore-03a45bcd40eeb81d.rlib', '/Users/pepyakin/.emscripten_cache/asmjs/dlmalloc_debug.bc', '/Users/pepyakin/.emscripten_cache/asmjs/libc.bc', '/Users/pepyakin/.emscripten_cache/asmjs/wasm-libc.bc']
+DEBUG:root:llvm-nm failed on file /private/var/folders/cd/c9707gm91qj22fkb99clygfm0000gn/T/emscripten_temp_M4Vtwe_archive_contents/core-03a45bcd40eeb81d.core0.rust-cgu.bytecode.encoded: return code 1, error: /Users/pepyakin/tmp/emsdk_portable/clang/fastcomp/build_incoming_64/bin/llvm-nm: /private/var/folders/cd/c9707gm91qj22fkb99clygfm0000gn/T/emscripten_temp_M4Vtwe_archive_contents/core-03a45bcd40eeb81d.core0.rust-cgu.bytecode.encoded The file was not recognized as a valid object file
+
+
+DEBUG:root:adding object /Users/pepyakin/tmp/size-research/emcc-bare-side_module/target/main.main0.rust-cgu.o to link
+DEBUG:root:considering archive /Users/pepyakin/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/wasm32-unknown-emscripten/lib/libcore-03a45bcd40eeb81d.rlib
+DEBUG:root:adding object /private/var/folders/cd/c9707gm91qj22fkb99clygfm0000gn/T/emscripten_temp_M4Vtwe_archive_contents/core-03a45bcd40eeb81d.core0.rust-cgu.o to link
+DEBUG:root:done running loop of archive /Users/pepyakin/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/wasm32-unknown-emscripten/lib/libcore-03a45bcd40eeb81d.rlib
+DEBUG:root:adding object /Users/pepyakin/.emscripten_cache/asmjs/dlmalloc_debug.bc to link
+DEBUG:root:adding object /Users/pepyakin/.emscripten_cache/asmjs/libc.bc to link
+DEBUG:root:adding object /Users/pepyakin/.emscripten_cache/asmjs/wasm-libc.bc to link
+DEBUG:root:emcc step "link" took 0.07 seconds
+DEBUG:root:saving intermediate processing steps to /var/folders/cd/c9707gm91qj22fkb99clygfm0000gn/T/emscripten_temp
+DEBUG:root:(not saving intermediate /var/folders/cd/c9707gm91qj22fkb99clygfm0000gn/T/emscripten_temp/emcc-0-basebc.bc because deferring linking)
+DEBUG:root:emcc: LLVM opts: -disable-verify -internalize -internalize-public-api-list=call,takes_slice,malloc,free -globaldce -disable-loop-vectorization -disable-slp-vectorization -vectorize-loops=false -vectorize-slp=false -vectorize-slp-aggressive=false  [num inputs: 5]
+DEBUG:root:emcc step "post-link" took 0.24 seconds
+DEBUG:root:LLVM => JS
+warning: unresolved symbol: rust_eh_personality
+warning: unresolved symbol: rust_begin_unwind
+warning: unresolved symbol: derp
+DEBUG:root:emcc step "emscript (llvm => executable code)" took 0.36 seconds
+DEBUG:root:emcc step "source transforms" took 0.00 seconds
+DEBUG:root:wrote memory initialization to target/main.js.mem
+DEBUG:root:emcc step "memory initializer" took 0.00 seconds
+DEBUG:root:emcc step "js opts" took 0.00 seconds
+DEBUG:root:separating asm
+DEBUG:root:PYTHON not defined in /Users/pepyakin/.emscripten, using "/usr/local/opt/python/bin/python2.7"
+DEBUG:root:JAVA not defined in /Users/pepyakin/.emscripten, using "java"
+DEBUG:root:Cache: PID 39101 acquiring multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache
+DEBUG:root:Cache: done
+DEBUG:root:Cache: PID 39101 released multiprocess file lock to Emscripten cache at /Users/pepyakin/.emscripten_cache
+DEBUG:root:check tells us to use asm.js backend
+DEBUG:root:using binaryen, with method: native-wasm
+DEBUG:root:asm2wasm (asm.js => WebAssembly): /Users/pepyakin/.emscripten_ports/binaryen/binaryen-version_39/bin/asm2wasm target/main.temp.asm.js --total-memory=16777216 --trap-mode=allow -O3 --mem-init=target/main.js.mem --mem-base=1024 --no-legalize-javascript-ffi --wasm-only -g -o target/main.wast -S
+DEBUG:root:wasm-as (text => binary): /Users/pepyakin/.emscripten_ports/binaryen/binaryen-version_39/bin/wasm-as target/main.wast -o target/main.wasm -g --source-map=target/main.wasm.map
+DEBUG:root:emcc step "asm2wasm" took 0.13 seconds
+DEBUG:root:emcc step "final emitting" took 0.00 seconds
+DEBUG:root:total time: 0.94 seconds
+
+INFO:rustc_trans::back::link: linker stdout:
